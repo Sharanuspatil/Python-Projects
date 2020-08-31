@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://www.py4e.com/tools/python-data/?PHPSESSID=f93bd074ccdf7a0cb8307acc9edb6e6c -->
+<html style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PY4E - Python for Everybody</title>
+        <script>
+        var _TSUGI = {
+            context_title: "Using Python to Access Web Data",
+            link_title: "Extracting Data With Regular Expressions",
+            user_displayname: "sharanu",
+            ajax_session: "PHPSESSID=f93bd074ccdf7a0cb8307acc9edb6e6c",
+            heartbeat: 1500000,
+            heartbeat_url: "https://www.py4e.com/tsugi/util/heartbeat?msec=1500000&PHPSESSID=f93bd074ccdf7a0cb8307acc9edb6e6c",
+            rest_path: {"parent":"\/tools\/python-data","base_url":"https:\/\/www.py4e.com","controller":"","extra":"","action":false,"parameters":[],"current":"\/tools\/python-data","full":"\/tools\/python-data"},
+            spinnerUrl: "https://static.tsugi.org/img/spinner.gif",
+            staticroot: "https://static.tsugi.org",
+            websocket_url: false,
+            websocket_token: false,
+            window_close_message: "Application complete",
+            session_expire_message: "Your session has expired"
+        }
+        </script>
+        <!-- Tiny bit of JS -->
+        <script src="./PY4E - Python for Everybody_files/tsugiscripts_head.js.download"></script>
+        <!-- Le styles -->
+        <link href="./PY4E - Python for Everybody_files/bootstrap.min.css" rel="stylesheet">
+        <link href="./PY4E - Python for Everybody_files/jquery-ui.min.css" rel="stylesheet">
+                <link href="./PY4E - Python for Everybody_files/all.css" rel="stylesheet">
+        <link href="./PY4E - Python for Everybody_files/v4-shims.css" rel="stylesheet">
+        <style>:root {--primary:#0D47A1;--primary-border:#0d4295;--primary-darker:#0c4091;--primary-darkest:#0b3b85;--secondary:#EEEEEE;--text:#111111;--text-light:#5E5E5E;--font-family:sans-serif;--font-size:14px;}</style>
+          <link href="./PY4E - Python for Everybody_files/tsugi.css" rel="stylesheet">
+
+          <style>
+                        </style>
+<style>
+a[target="_blank"]:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    content: " \f35d";
+}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+body {
+    top: 0px !important;
+    }
+</style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/html5shiv/html5shiv.js"></script>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/respond/respond.min.js"></script>
+        <![endif]-->
+
+    <script type="text/javascript">CSRF_TOKEN = "5e9d3578cfa9b";</script>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./PY4E - Python for Everybody_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./PY4E - Python for Everybody_files/main.js.download"></script><script type="text/javascript" charset="UTF-8" src="./PY4E - Python for Everybody_files/element_main.js.download"></script></head>
+<body prefix="oer: http://oerschema.org" style="padding-top: 5.93rem; position: relative; min-height: 100%; top: 0px;">
+<div id="body_container" class="container">
+<script>
+if (window!=window.top) {
+    document.getElementById("body_container").className = "container-fluid";
+} else {
+    document.getElementById("body_container").className = "container";
+}
+</script>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="tsugi_main_nav_bar" style="display: block;">  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:window_close();">Done</a>
+    </div>
+    <div class="navbar-collapse collapse">
+    </div> <!--/.nav-collapse -->
+  </div> <!--container -->
+</nav>
+<script>
+if ( ! inIframe() ) {
+  document.getElementById('tsugi_main_nav_bar').style.display = 'block';
+  document.getElementsByTagName('body')[0].style.paddingTop = '5.93rem';
+}
+</script>
+<!-- Modal -->
+<div id="settings" class="modal fade" role="dialog" style="display: none;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="fa fa-close" aria-hidden="true"></span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Extracting Data With Regular Expressions Settings</h4>
+      </div>
+      <div class="modal-body">
+                  <img id="settings_spinner" src="./PY4E - Python for Everybody_files/spinner.gif" style="display: none">
+            <span id="save_fail" class="text-danger" style="display:none;">Unable to save settings</span>
+            <p>Exercise is set to Sum with a Regular Expression</p><p>There is currently no due date/time for this assignment.</p>
+              </div>
+    </div>
+
+  </div>
+</div>
+<p>Welcome sharanu from Using Python to Access Web Data</p>
+<div id="flashmessages"></div><p>
+<b>Finding Numbers in a Haystack</b>
+</p><p>
+In this assignment you will read through and parse a file with text and numbers.  You will extract all the numbers
+in the file and compute the sum of the numbers.
+</p>
+<b>Data Files</b>
+<p>
+We provide two files for this assignment.  One is a sample file where we give you the sum for your
+testing and the other is the actual data you need to process for the assignment.  
+</p><ul>
+<li> Sample data: <a href="http://py4e-data.dr-chuck.net/regex_sum_42.txt" target="_blank">http://py4e-data.dr-chuck.net/regex_sum_42.txt</a> 
+(There are 90 values with a sum=445833) </li>
+<li> Actual data: <a href="http://py4e-data.dr-chuck.net/regex_sum_446765.txt" target="_blank">http://py4e-data.dr-chuck.net/regex_sum_446765.txt</a> 
+(There are 101 values and the sum ends with 744)<br> </li>
+</ul>
+These links open in a new window.
+Make sure to save the file into the same folder as you will be writing your Python program.
+<b>Note:</b> Each student will have a distinct data file for the assignment - so only use your
+own data file for analysis.
+<p></p>
+<b>Data Format</b>
+<p>
+The file contains much of the text from the introduction of the textbook
+except that random numbers are inserted throughout the text.  Here is a sample of the output you might see:
+</p><pre>Why should you learn to write programs? 7746
+12 1929 8827
+Writing programs (or programming) is a very creative 
+7 and rewarding activity.  You can write programs for 
+many reasons, ranging from making your living to solving
+8837 a difficult data analysis problem to having fun to helping 128
+someone else solve a problem.  This book assumes that 
+everyone needs to know how to program ...
+</pre>
+The sum for the sample text above is <b>27486</b>.
+The numbers can appear anywhere in the line.  There can be any number of 
+numbers in each line (including none).
+<p></p>
+<b>Handling The Data</b>
+<p>
+The basic outline of this problem is to read the file, look for integers using the
+<b>re.findall()</b>, looking for a regular expression of <b>'[0-9]+'</b> and then 
+converting the extracted strings to integers and summing up the integers.
+</p>
+<p>
+<b>Turn in Assignent</b>
+</p><form method="post"><input type="hidden" name="PHPSESSID" value="f93bd074ccdf7a0cb8307acc9edb6e6c">
+Enter the sum from the actual data and your Python code below:<br>
+Sum: <input type="text" size="20" name="sum"> (ends with 744)
+<input type="submit" value="Submit Assignment"><br>
+Python code:<br>
+<textarea rows="20" style="width: 90%" name="code"></textarea><br>
+</form>
+<p></p>
+<b>Optional: Just for Fun</b>
+<p>
+There are a number of different ways to approach this problem.  While we don't recommend trying
+to write the most compact code possible, it can sometimes be a fun exercise.  Here is a 
+a redacted version of two-line version of this program using list comprehension:
+</p><pre>Python 2
+import re
+print sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] )
+
+Python 3:
+import re
+print( sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] ) )
+</pre>
+Please don't waste a lot of time trying to figure out the shortest solution until you 
+have completed the homework.   List comprehension is mentioned in Chapter 10 and the 
+<b>read()</b> method is covered in Chapter 7.
+<p></p>
+
+<script src="./PY4E - Python for Everybody_files/jquery-1.11.3.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/bootstrap.min.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/jquery-ui.min.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/jquery.timeago-1.6.3.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/handlebars-v4.0.2.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/tmpl.min.js.download"></script>
+<script src="./PY4E - Python for Everybody_files/tsugiscripts.js.download"></script>
+<script type="text/javascript">
+    HEARTBEAT_TIMEOUT = setTimeout(doHeartBeat, _TSUGI.heartbeat);
+    tsugiEmbedMenu();
+</script>
+<div id="google_translate_element" style="position: fixed; right: 1em; bottom: 0.25em;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="./PY4E - Python for Everybody_files/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="goog-te-menu-value" href="javascript:void(0)"><span>Select Language</span><img src="./PY4E - Python for Everybody_files/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="./PY4E - Python for Everybody_files/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, "google_translate_element");
+}
+</script><script type="text/javascript" src="./PY4E - Python for Everybody_files/f.txt"></script>
+<script>
+// PHP VERSION 7.0 and 7.1 HACK
+// https://stackoverflow.com/questions/44980654/how-can-i-make-trans-sid-cookie-less-sessions-work-in-php-7-1
+$('a').each(function (x) {
+    var href = $(this).attr('href');
+    if ( ! href ) return;
+    if ( ! href.startsWith('#') ) return;
+    var pos = href.indexOf('/?');
+    if ( pos < 1 ) return;
+    console.dir('Patching broken # href='+href);
+    href = href.substring(0,pos);
+    $(this).attr('href', href);
+});
+console.log('Checking malformed href for php 7.0');
+$('a').each(function (x) {
+    var href = $(this).attr('href');
+    var sess_name = 'PHPSESSID';
+    var sess_id = 'f93bd074ccdf7a0cb8307acc9edb6e6c';
+    if ( ! href ) return;
+    if ( href.startsWith('#') ) return;
+    if ( href.startsWith('http://') ) return;
+    if ( href.startsWith('javascript:') ) return;
+    if ( href.startsWith('https://') ) return;
+    if ( href.startsWith('//') ) return;
+    if ( href.indexOf(sess_name) > 0 ) return;
+    if ( href.indexOf('?') > 0 ) {
+        href = href + '&';
+    } else {
+        href = href + '?';
+    }
+    href = href + sess_name + '=' + sess_id;
+    console.dir('Patching missing session href='+href);
+    $(this).attr('href', href);
+});
+
+</script>
+
+</div><script src="./PY4E - Python for Everybody_files/webcomponents-lite.js.download"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./PY4E - Python for Everybody_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 1051px; height: 274px; display: none;" __idm_frm__="36" src="./PY4E - Python for Everybody_files/saved_resource.html"></iframe></body></html>
